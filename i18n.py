@@ -11,7 +11,7 @@ def load_language_list(language):
 
 class I18nAuto:
     def __init__(self, language=None):
-        if language in ['auto', None]:
+        if language in ["auto", None]:
             language = locale.getlocale()[0]
         if not os.path.exists(f"./i18n/{language}.json"):
             language = "en_US"
